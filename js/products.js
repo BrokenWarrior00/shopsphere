@@ -98,8 +98,8 @@ function bindAddButtons(products) {
 export async function renderHome() {
 
     const app = document.querySelector("#app");
-
-    app.innerHTML = `
+    if (!app.querySelector("#home-categories")) {
+        app.innerHTML = `
 
     <section class="hero">
 
@@ -202,7 +202,7 @@ export async function renderHome() {
 
     </section>
     `;
-
+    }
     try {
 
         const [products, categories] = await Promise.all([
