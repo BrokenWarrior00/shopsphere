@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopSphere - Discover fashion, electronics and everyday essentials.">
+    <meta name="theme-color" content="#17251e">
+
+    <title>ShopSphere | Discover More</title>
+
+    <link rel="preconnect" href="https://fakestoreapi.com">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <script type="module" src="/js/app.js"></script>
+</head>
+
+<body>
+
+    <div class="announcement">
+        Free shipping on orders over $75
+        <span>·</span>
+        Easy 30-day returns
+    </div>
+
+    <header class="site-header">
+
+        <a href="/" data-link class="brand">
+            <span class="brand-mark">S</span>
+            ShopSphere
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="/" data-link>Home</a>
+            <a href="/products" data-link>Shop</a>
+            <a href="/about" data-link>About</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="/products" data-link class="icon-link" aria-label="Search products">
+                ⌕
+            </a>
+
+            <a href="/cart" data-link class="cart-link">
+                Bag
+                <span id="cart-count" class="cart-count">0</span>
+            </a>
+        </div>
+
+    </header>
+
+    <main id="app" tabindex="-1">
+        <div class="page-loading">Loading ShopSphere...</div>
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div>
+                <a href="/" data-link class="brand footer-brand">
+                    <span class="brand-mark">S</span>
+                    ShopSphere
+                </a>
+
+                <p>Thoughtful finds for everyday living.</p>
+            </div>
+
+            <div>
+                <strong>Explore</strong>
+                <a href="/products" data-link>All products</a>
+                <a href="/about" data-link>Our story</a>
+            </div>
+
+            <div>
+                <strong>Help</strong>
+                <a href="/cart" data-link>Your bag</a>
+                <a href="mailto:hello@shopsphere.example">Contact</a>
+            </div>
+
+            <div>
+                <strong>Stay in the loop</strong>
+                <p>Fresh finds, delivered occasionally.</p>
+
+                <form id="newsletter-form" class="newsletter-form">
+                    <label class="sr-only" for="newsletter-email">
+                        Email address
+                    </label>
+
+                    <input
+                        id="newsletter-email"
+                        type="email"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                    <button type="submit">→</button>
+                </form>
+
+                <small id="newsletter-message" aria-live="polite"></small>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© <span id="year"></span> ShopSphere.</span>
+            <span>Built with HTML, CSS and JavaScript.</span>
+        </div>
+
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
