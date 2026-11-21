@@ -23,38 +23,47 @@ document.addEventListener("click", event => {
         return;
     }
 
-    const url = new URL(link.href, location.href);
-
-    if (url.origin !== location.origin) {
-        return;
-    }
+    const href = link.getAttribute("href");
 
     event.preventDefault();
 
-    navigate(url.pathname + url.search);
+    if (href.startsWith("#")) {
+        navigate(href);
+    } else {
+        const url = new URL(href, location.href);
+        navigate(url.pathname);
+    }
 
 });
-
-window.addEventListener("popstate", route);
 
 document.querySelector("#year").textContent =
 new Date().getFullYear();
 
 saveCart(getCart());
 
-document
-.querySelector("#newsletter-form")
-.addEventListener("submit", event => {
+const newsletterForm =
+document.querySelector("#newsletter-form");
 
-    event.preventDefault();
+if (newsletterForm) {
 
-    document.querySelector("#newsletter-message").textContent =
-    "Thanks for subscribing! (Demo only)";
+    newsletterForm.addEventListener("submit", event => {
 
-    event.currentTarget.reset();
+        event.preventDefault();
 
-    showToast("Thanks for joining us!");
+        const message =
+        document.querySelector("#newsletter-message");
 
-});
+        if (message) {
+            message.textContent =
+            "Thanks for subscribing! (Demo only)";
+        }
+
+        event.currentTarget.reset();
+
+        showToast("Thanks for joining us!");
+
+    });
+
+}
 
 route();
