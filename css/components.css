@@ -68,6 +68,7 @@
 
 .hero-art {
     min-height: 400px;
+    aspect-ratio: 1 / 1;
     position: relative;
     background: linear-gradient(135deg, #c5d7c5, #eef0dc);
     display: grid;
@@ -84,9 +85,12 @@
 }
 
 .hero-art img {
+    display: block;
     width: 75%;
     height: 390px;
+    max-width: 100%;
     object-fit: contain;
+    object-position: center;
     position: relative;
     mix-blend-mode: multiply;
 }
