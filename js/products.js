@@ -132,17 +132,16 @@ export async function renderHome() {
     </div>
 
 
+
     <div class="hero-art">
-
-    <img
-        src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-        alt="Featured backpack"
-        fetchpriority="high"
-        decoding="async"
-        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&auto=format&fit=crop';"
-    >
-
+        <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt="Featured Fjallraven backpack"
+            fetchpriority="high"
+            decoding="async"
+        >
     </div>
+
 
 
     </section>
