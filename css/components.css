@@ -540,3 +540,41 @@
     border-radius: 16px;
     color: var(--muted);
 }
+.skeleton-tile {
+    pointer-events: none;
+}
+
+.skeleton-block {
+    display: block;
+    height: 13px;
+    width: 65%;
+    border-radius: 6px;
+    background: #dfe5df;
+}
+
+.skeleton-tile .skeleton-block:first-child {
+    width: 35px;
+    height: 25px;
+}
+
+.skeleton-tile .skeleton-block:last-child {
+    width: 75%;
+    height: 17px;
+}
+
+.skeleton-image {
+    background: #edf1eb;
+}
+
+.skeleton-card .product-info .skeleton-block {
+    margin: 9px 0;
+}
+
+.skeleton-card .product-info .skeleton-block:nth-child(2) {
+    width: 90%;
+    height: 18px;
+}
+
+.skeleton-card .product-info .skeleton-block:nth-child(3) {
+    width: 45%;
+}
